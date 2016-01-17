@@ -9,18 +9,10 @@ class TodoItem
     @priority = options[:priority]
   end
   
-  def format_priority
-    value = " ⇧" if @priority == "high"
-    value = " ⇨" if @priority == "medium"
-    value = " ⇩" if @priority == "low"
-    value = "" if !@priority
-    return value
-  end
-  
   def details
     format_description(@description).to_s + "due: " +
     format_date(date1: @due).to_s +
-    format_priority.to_s
+    format_priority(@priority).to_s
   end
 
 end
