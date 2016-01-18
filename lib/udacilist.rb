@@ -35,4 +35,9 @@ class UdaciList
     end 
   end
 
+  def filter(type)
+    type = type.downcase
+    filtered_items = @items.select{|item| item.type == type}
+  end
+
 end

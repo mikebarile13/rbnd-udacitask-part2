@@ -12,7 +12,11 @@ class LinkItem
   end
   
   def details
-    "Link: " + format_description(@description) + " site name: " + format_name
+    "Link: " + format_description(@description) + " Site Name: " + format_name
+  end
+
+  def type
+    "link"
   end
 
 end
