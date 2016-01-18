@@ -1,3 +1,5 @@
+require 'rubygems'
+require 'bundler/setup'
 require 'chronic'
 require 'colorize'
 require 'artii'

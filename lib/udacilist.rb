@@ -1,6 +1,5 @@
 class UdaciList
 
-  include UdaciListErrors
   attr_reader :title, :items
 
   def initialize(options={})
@@ -18,12 +17,12 @@ class UdaciList
       when "link"
         @items.push LinkItem.new(description, options)
       else 
-        raise InvalidItemType, "Item type '#{type}' not supported"
+        raise UdaciListErrors::InvalidItemType, "Item type '#{type}' not supported"
     end
   end
   
   def delete(index)
-    index <= (@items.length - 1) || index < 0 ? @items.delete_at(index - 1) : (raise IndexExceedsListSize, "Provided index '#{index}' out of list bounds")
+    index <= (@items.length - 1) || index < 0 ? @items.delete_at(index - 1) : (raise UdaciListErrors::IndexExceedsListSize, "Provided index '#{index}' out of list bounds")
   end
   
   def all
