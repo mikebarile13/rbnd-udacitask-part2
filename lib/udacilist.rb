@@ -28,7 +28,8 @@ class UdaciList
   
   def all
     puts "-" * @title.length
-    puts @title
+    sweet_title = Artii::Base.new :font => 'big'
+    puts sweet_title.asciify(@title).colorize(:light_blue)
     puts "-" * @title.length
     @items.each_with_index do |item, position|
       puts "#{position + 1}) #{item.details}"
