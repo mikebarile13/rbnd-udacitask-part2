@@ -21,4 +21,8 @@ class TodoItem
     "todo"
   end
 
+  def change_priority(priority)
+    @@priorities.include?(priority) ? (@priority = priority) : (raise UdaciListErrors::InvalidPriorityValue, "'#{priority}' is an invalid prioritization.")
+  end
+
 end

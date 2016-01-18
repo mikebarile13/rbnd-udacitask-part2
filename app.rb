@@ -47,3 +47,8 @@ list.all
 # DEMO FILTER BY ITEM TYPE
 # ------------------------
  new_list.filter("event")
+
+# DEMO PRIORITY CHANGER
+# ------------------------
+ new_list.change_priority(1, "high")
+ new_list.all

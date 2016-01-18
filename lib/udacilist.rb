@@ -40,4 +40,11 @@ class UdaciList
     filtered_items = @items.select{|item| item.type == type}
   end
 
+  def change_priority(index, priority = "low")
+    index_minus = index - 1
+    type = @items[index_minus].type
+    raise UdaciListErrors::InvalidItemType, "Must be a 'todo' item" if type != "todo"
+    index <= (@items.length - 1) || index < 0 ? @items[index_minus].change_priority(priority) : (raise UdaciListErrors::IndexExceedsListSize, "Provided index '#{index}' out of list bounds")
+  end
+
 end
