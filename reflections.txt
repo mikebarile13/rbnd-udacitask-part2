@@ -1,13 +1,18 @@
 # What you added to Udacitask 2.0
 # -------------------------------------------------------
 1. What is the gem of your choice and how did you use it?
+  A) I chose "Artii" as my third gem; it displays list titles as ASCII art!
 2. Describe the 2 features you added to the project.
-  a) Feature 1...
-  b) Feature 2...
+  a) change_priority: Added a series of methods that allows the user to change the priority of todo items
+  b) add_dailies: Added a method that allows the user to quickly add a set of 'daily todos' to the list
 
 # REFLECTIONS
 # -------------------------------------------------------
 1. How long did you spend working on this project?
+  A) It took about 4 hours 
 2. What was the most rewarding challenge you conquered?
+  A) It took me FOREVER to get format_date to work... I learned that you have to explicitly return values if a method is only a case clause
 3. What two additional features did you build? Why?
+  A) I added a change_priority method and an add_dailies method; I have a few things I do everyday so it would be helpful to be able to automatically add them. I also constantly have to shift my priorities so being able to change that would also be helpful!
 4. Where do you still have room to grow?
+  A) This project was a lot of fun. I got hung up a few times where I just didn't understand the EXACT syntax required to get the program functioning. I think I just need practice practice practice to continue to learn the syntax so that programming involves less debugging.
