@@ -1,7 +1,7 @@
 module Listable
   	
-  	def format_description(description)
-		"#{description}".ljust(30)
+  	def format_description(description, index = 0)
+		index < 9 ? "#{description}".ljust(50) : "#{description}".ljust(49)
 	end
 
 	def format_priority(priority)

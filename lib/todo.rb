@@ -10,9 +10,9 @@ class TodoItem
     @@priorities.include?(options[:priority]) ? (@priority = options[:priority]) : (raise UdaciListErrors::InvalidPriorityValue, "'#{options[:priority]}' is an invalid prioritization.")
   end
   
-  def details
+  def details(index)
     "To Do: " +
-    format_description(@description).to_s + "Due: " +
+    format_description(@description, index).to_s + "Due: " +
     format_date(date1: @due).to_s +
     format_priority(@priority).to_s
   end

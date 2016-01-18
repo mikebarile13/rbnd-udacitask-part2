@@ -48,7 +48,8 @@ list.all
 # ------------------------
  new_list.filter("event")
 
-# DEMO PRIORITY CHANGER
+# DEMO PRIORITY CHANGER AND DAILY TO-DOS
 # ------------------------
  new_list.change_priority(1, "high")
+ new_list.add_dailies
  new_list.all

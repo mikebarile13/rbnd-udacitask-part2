@@ -31,7 +31,7 @@ class UdaciList
     puts sweet_title.asciify(@title).colorize(:light_blue)
     puts "-" * @title.length
     @items.each_with_index do |item, position|
-      puts "#{position + 1}) #{item.details}"
+      puts "#{position + 1}) #{item.details(position)}"
     end 
   end
 
@@ -45,6 +45,12 @@ class UdaciList
     type = @items[index_minus].type
     raise UdaciListErrors::InvalidItemType, "Must be a 'todo' item" if type != "todo"
     index <= (@items.length - 1) || index < 0 ? @items[index_minus].change_priority(priority) : (raise UdaciListErrors::IndexExceedsListSize, "Provided index '#{index}' out of list bounds")
+  end
+
+  def add_dailies
+    @items.push TodoItem.new("Go for run", due: "today", priority: "medium")
+    @items.push TodoItem.new("Meditate", due: "today", priority: "medium")
+    @items.push TodoItem.new("Programming Training", due: "today", priority: "medium")
   end
 
 end
