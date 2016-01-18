@@ -31,6 +31,7 @@ list.all
  new_list.add("event", "Life happens")
  new_list.add("link", "https://www.udacity.com/", site_name: "Udacity Homepage")
  new_list.add("link", "http://ruby-doc.org")
+ new_list.all
 
 # SHOULD RETURN ERROR MESSAGES
 # ----------------------------
