@@ -1,12 +1,12 @@
 module UdaciListErrors
 	
-	class UnsupportedItemType < StandardError
+	class InvalidItemType < StandardError
   	end
 
-	class OutOfListBounds < StandardError
+	class IndexExceedsListSize < StandardError
   	end
 	
-	class UnsupportedItemType2 < StandardError
+	class InvalidPriorityValue < StandardError
   	end  	
 
 end

@@ -18,12 +18,12 @@ class UdaciList
       when "link"
         @items.push LinkItem.new(description, options)
       else 
-        raise UnsupportedItemType, "Item type '#{type}' not supported"
+        raise InvalidItemType, "Item type '#{type}' not supported"
     end
   end
   
   def delete(index)
-    index <= (@items.length - 1) || index < 0 ? @items.delete_at(index - 1) : (raise OutOfListBounds, "Provided item outside of list")
+    index <= (@items.length - 1) || index < 0 ? @items.delete_at(index - 1) : (raise IndexExceedsListSize, "Provided index '#{index}' out of list bounds")
   end
   
   def all
