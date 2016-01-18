@@ -3,7 +3,7 @@ module UdaciListErrors
 	class UnsupportedItemType < StandardError
   	end
 
-	class UnsupportedItemType1 < StandardError
+	class OutOfListBounds < StandardError
   	end
 	
 	class UnsupportedItemType2 < StandardError

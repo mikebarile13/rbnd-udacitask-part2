@@ -23,7 +23,7 @@ class UdaciList
   end
   
   def delete(index)
-    @items.delete_at(index - 1)
+    index <= (@items.length - 1) || index < 0 ? @items.delete_at(index - 1) : (raise OutOfListBounds, "Provided item outside of list")
   end
   
   def all
