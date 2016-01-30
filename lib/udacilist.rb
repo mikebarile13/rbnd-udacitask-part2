@@ -22,7 +22,7 @@ class UdaciList
   end
   
   def delete(index)
-    index <= (@items.length - 1) || index < 0 ? @items.delete_at(index - 1) : (raise UdaciListErrors::IndexExceedsListSize, "Provided index '#{index}' out of list bounds")
+    index <= (@items.length) && index > 0 ? @items.delete_at(index - 1) : (raise UdaciListErrors::IndexExceedsListSize, "Provided index '#{index}' out of list bounds")
   end
   
   def all
@@ -44,7 +44,7 @@ class UdaciList
     index_minus = index - 1
     type = @items[index_minus].type
     raise UdaciListErrors::InvalidItemType, "Must be a 'todo' item" if type != "todo"
-    index <= (@items.length - 1) || index < 0 ? @items[index_minus].change_priority(priority) : (raise UdaciListErrors::IndexExceedsListSize, "Provided index '#{index}' out of list bounds")
+    index <= (@items.length) && index > 0 ? @items[index_minus].change_priority(priority) : (raise UdaciListErrors::IndexExceedsListSize, "Provided index '#{index}' out of list bounds")
   end
 
   def add_dailies

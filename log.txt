@@ -1,0 +1,137 @@
+commit b075ebdb9133ecb6e7a0ea5d4a838d904d520b4c
+Author: Mike Barile <mikebarile13@gmail.com>
+Date:   Sun Jan 17 18:50:57 2016 -0800
+
+    Completed the reflections.txt doc
+
+commit 5fccba10d1531a71abacbd17a6af1e90bf3e4556
+Author: Mike Barile <mikebarile13@gmail.com>
+Date:   Sun Jan 17 18:40:40 2016 -0800
+
+    Added an 'add_dailies' method that adds a set of daily to-dos to the list.
+
+commit ac0cbe74e5a52cf9b9e7325ab172135963c3e26e
+Author: Mike Barile <mikebarile13@gmail.com>
+Date:   Sun Jan 17 18:14:35 2016 -0800
+
+    Added a 'change_priority' method to Udacilist and Todo that allows user to change todo item priority.
+
+commit c17be05604bc33f25e331c30ac4d9b114d8ad81c
+Author: Mike Barile <mikebarile13@gmail.com>
+Date:   Sun Jan 17 18:01:11 2016 -0800
+
+    Added 'filter' method to Udacilist
+
+commit ccb0e71db833319886b43e081913296188d35236
+Author: Mike Barile <mikebarile13@gmail.com>
+Date:   Sun Jan 17 17:50:39 2016 -0800
+
+    Put item type at front of each item on list.
+
+commit 1faa19f6c61b95f5cf0c0303c83f44ea1909bd3e
+Author: Mike Barile <mikebarile13@gmail.com>
+Date:   Sun Jan 17 17:40:21 2016 -0800
+
+    Created gemfile and gemlock. Added bundle/setup to app.
+
+commit 1542e89c643fde2e2d5c55303af172dbdf463ca8
+Author: Mike Barile <mikebarile13@gmail.com>
+Date:   Sun Jan 17 17:31:28 2016 -0800
+
+    Made default title for lists 'Untitled List'
+
+commit 574da8b8aa5cec080d322359ade599496a42b51c
+Author: Mike Barile <mikebarile13@gmail.com>
+Date:   Sun Jan 17 17:28:58 2016 -0800
+
+    Added colorize, chronic, and artii gems. Changed title to artii format, arrows to colorized, and date parses' to Chronic in Todo and Event.
+
+commit 921ef2cec79879056e2330c7d13cb4da8bf69091
+Author: Mike Barile <mikebarile13@gmail.com>
+Date:   Sun Jan 17 17:01:47 2016 -0800
+
+    Added error type InvalidPriorityValue; raised error in Todo class initialization method.
+
+commit 4e1e705ac78901b65837e89c0815fad3031040fb
+Author: Mike Barile <mikebarile13@gmail.com>
+Date:   Sun Jan 17 16:31:21 2016 -0800
+
+    Added 'OutOfListBounds' error to Udacilist 'delete' method.
+
+commit d68fe9b671394f3a94f349cbb54a173db6a4dd88
+Author: Mike Barile <mikebarile13@gmail.com>
+Date:   Sun Jan 17 16:25:09 2016 -0800
+
+    Added UnsupportedItemType error; rasied in udacilist 'add' method.
+
+commit 53c7f774a4549e66631bfab5e61c55eb42053518
+Author: Mike Barile <mikebarile13@gmail.com>
+Date:   Sun Jan 17 15:49:33 2016 -0800
+
+    Moved format_priority method from Todo class to Listable module.
+
+commit bc4421d39a7fff8000e41ef6d7914d7259930395
+Author: Mike Barile <mikebarile13@gmail.com>
+Date:   Sun Jan 17 15:07:50 2016 -0800
+
+    Refactored format_date method in Listable.
+
+commit 1532b412a862df73940203968cce46bb09b8d602
+Author: Mike Barile <mikebarile13@gmail.com>
+Date:   Sun Jan 17 15:04:18 2016 -0800
+
+    Added 'Format_Date' method to 'Listable' module; removed method from classes.
+
+commit 576d6e82f43435d82fab6225b4af0a59cbc5a92d
+Author: Mike Barile <mikebarile13@gmail.com>
+Date:   Sat Jan 16 17:05:50 2016 -0800
+
+    Moved 'format_description' method from classes into 'listable' modeule; included in classes.
+
+commit 5e581f765a0a19990f26f132e9e7fb69d6a2e7d3
+Author: Mike Barile <mikebarile13@gmail.com>
+Date:   Sat Jan 16 17:00:01 2016 -0800
+
+    Initial commit
+
+commit 68aab52057d8e55093ba1d8bb6bffb6e101d7392
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Thu Jan 14 16:33:03 2016 -0800
+
+    Updated README to clarify feature requirements
+
+commit 44c0ac9bbf25cfcb0fb2804df173024272b22079
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Wed Jan 13 13:15:43 2016 -0800
+
+    Change filter method requirement
+
+commit ff315acad10f611b79aaedfec65b11aef55a6378
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Wed Jan 13 11:52:22 2016 -0800
+
+    Add clarification about filter method
+
+commit ee74dea2ba39e201720aca9c29380f920a268600
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Tue Jan 12 16:32:37 2016 -0800
+
+    Add filter by item type demo to starter code
+
+commit 154160cf3b7ff1a29f5ef8e987a219852cac0f12
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Tue Jan 12 11:09:40 2016 -0800
+
+    Add links for gem sources
+
+commit 6c365dc917cd32a5e8c520160ec58198cc8cb6d1
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Tue Jan 12 11:06:54 2016 -0800
+
+    Add rubric link
+
+commit ad33c7f02fec47e51c72da5cde3f8032f7b8a111
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Tue Jan 12 10:58:34 2016 -0800
+
+    Initial commit
