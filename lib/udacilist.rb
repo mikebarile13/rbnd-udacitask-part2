@@ -65,7 +65,7 @@ class UdaciList
   def change_priority(index, priority = "low")
     index_minus = index - 1
     type = @items[index_minus].type
-    raise UdaciListErrors::InvalidItemType, "Must be a 'todo' item" if type != "todo"
+    raise UdaciListErrors::InvalidItemType, "Must be a 'todo' item" unless type == "todo"
     index <= (@items.length) && index > 0 ? @items[index_minus].change_priority(priority) : (raise UdaciListErrors::IndexExceedsListSize, "Provided index '#{index}' out of list bounds")
   end
 
