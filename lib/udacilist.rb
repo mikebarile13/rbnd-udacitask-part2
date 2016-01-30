@@ -37,7 +37,29 @@ class UdaciList
 
   def filter(type)
     type = type.downcase
-    filtered_items = @items.select{|item| item.type == type}
+    case type
+      when "todo"
+        filtered_items = @items.select{|item| item.type == type}
+        return_filter(filtered_items)
+      when "event"
+        filtered_items = @items.select{|item| item.type == type}
+        return_filter(filtered_items)
+      when "link"
+        filtered_items = @items.select{|item| item.type == type}
+        return_filter(filtered_items)
+      else 
+        raise UdaciListErrors::InvalidItemType, "Item type '#{type}' not supported"
+    end
+  end
+
+  def return_filter(list)
+    puts "-" * @title.length
+    sweet_title = Artii::Base.new :font => 'big'
+    puts sweet_title.asciify(@title).colorize(:light_blue)
+    puts "-" * @title.length
+    list.each_with_index do |item, position|
+      puts "#{position + 1}) #{item.details(position)}"
+    end 
   end
 
   def change_priority(index, priority = "low")
